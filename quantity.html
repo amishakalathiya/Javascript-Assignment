@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        table{
+          background-color: rgb(224, 205, 224);  
+          border-color:  purple;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          padding-left: 30px;
+          padding-right: 30px;
+          text-align: center;
+        }
+        #total{
+            background-color: rgb(109, 73, 109);
+            color: white;
+        }
+        #btn{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgb(109, 73, 109);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+<center>
+
+    <h1>Calculate subtotal price of quantity</h1>
+    <table border="1" cellpadding="20">
+        <tr>
+            <th>Product Info</th>
+            <th>Price (per unit)</th>
+            <th>Quantity</th>
+            <th>Price(subtotal)</th>
+            
+        </tr>
+
+        <tr>
+            <td>
+                <img src="2.jpg" alt="" width="70" height="50">
+                Fortunate Window Hardware
+            </td>
+            <td>300</td>
+            <td><input type="number" id="q"></td>
+            <td><input type="text" id="p"></td>
+           
+        </tr>
+
+        <tr>
+            <td>
+                <img src="3.jpg" alt="" width="70" height="50">
+                Woven Trellis Window Hardware
+            </td>
+            <td>100</td>
+            <td><input type="number" id="q1"></td>
+            <td><input type="text" id="p1"></td>
+            
+        </tr>
+
+
+        <tr >
+            <td colspan="3"  align="right" id="total">Product Subtotal</td>
+            <td><input type="text" id="subtotal"></td>
+        </tr>
+
+        <tr align="right">
+            <td colspan="6"><button onclick="price()" id="btn">Button</button></td>
+        </tr>
+
+
+
+    </table>
+
+</center>
+
+<script>
+
+        function price(){
+
+            a=parseInt(document.getElementById('q').value);
+            b=parseInt(document.getElementById('q1').value);
+        
+            pq1=a*300;
+            document.getElementById('p').value=pq1;
+            pq2=b*100;
+            document.getElementById('p1').value=pq2;
+           
+            sp=pq1+pq2;
+            document.getElementById('subtotal').value=sp;
+        }
+
+
+
+</script>
+</body>
+</html>
